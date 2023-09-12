@@ -43,7 +43,7 @@ class BookspiderSpider(scrapy.Spider):
             'stars': response.css('p.star-rating ::attr(class)').get(),
             'category':response.xpath("//ul[@class='breadcrumb']/li[@class='active']/preceding-sibling::li[1]/a/text()").get(),
             'description':  response.xpath("//div[@id='product_description']/following-sibling::p/text()").get(),
-            'price': response.css('p,price_color ::text').get()
+            'price': response.css('p.price_color ::text').get()
 
 
         }
