@@ -12,7 +12,10 @@ BOT_NAME = "bookscrapper"
 SPIDER_MODULES = ["bookscrapper.spiders"]
 NEWSPIDER_MODULE = "bookscrapper.spiders"
 
-
+FEEDS = {
+    'booksdata.csv':{'format': 'csv'}
+}
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "bookscrapper (+http://www.yourdomain.com)"
 
